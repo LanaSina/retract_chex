@@ -1,0 +1,34 @@
+% uses https://gist.github.com/tylerneylon/59f4bcf316be525b30ab
+
+
+\documentclass{article} 
+\usepackage{verbatim} 
+\usepackage{luacode}
+\begin{document} 
+
+
+% the ~ and % character needs to have a safe category code inside a "group"
+%\begingroup
+%\catcode`\~=11
+%\catcode`\^^M=12 %<---we further explore this below!
+%\catcode`\%=12
+%\directlua{
+
+\begin{luacode}
+
+
+local test = require('test_lua.lua')
+
+\end{luacode}
+
+%}
+
+
+%\endgroup
+
+
+hello
+
+% \verbatiminput{result.txt} 
+
+\end{document}
